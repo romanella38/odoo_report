@@ -48,16 +48,32 @@
                     </groupby>
                 </tree>
            </xpath>
+           
         </field>
     </record>
    
-   
+   <record id="journales_asientos_inher" model="ir.ui.view">
+        <field name="name">journales.asientos_inher</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_pivot"/>
+        <field name="arch" type="xml">
+            <xpath expr="//pivot[1]" position="replace">
+               <field name="debit" type="measure"/>
+               <field name="credit" type="measure"/>
+    
+            </xpath>
+           
+        </field>
+    </record>
 
     <record model="ir.actions.act_window" id="journales.action_window_01">
       <field name="name">Lista contable</field>
       <field name="res_model">account.move.line</field>
-      <field name="view_mode">tree</field>
+      <field name="view_mode">tree,pivot</field>
     </record>
+
+
+
     
 <menuitem
         parent="account.menu_finance_reports"

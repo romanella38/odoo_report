@@ -18,7 +18,6 @@
 
             <div class="act_as_row labels">
                
-                
                 <div class="act_as_cell" name="date" style="width: 5.41%;">Número de asiento</div> 
                 <div class="act_as_cell" name="date" style="width: 5.41%;">Fecha</div>
                 <div class="act_as_cell" name="account" t-att-style="account_column_style">
